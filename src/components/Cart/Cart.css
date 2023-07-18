@@ -55,8 +55,8 @@
   padding: 8px;
   border-radius: 50%;
   font-size: 14px;
-  top: 5px;
-  right: 40px;
+  top: 0px;
+  right: 34px;
   z-index: 99999;
   background-color: green;
 }

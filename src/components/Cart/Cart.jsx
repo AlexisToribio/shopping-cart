@@ -12,8 +12,8 @@ export default function Cart() {
     <>
       <label htmlFor={cartCheckboxId} className="cart-button">
         <CartIcon />
+        <span className="cart-count">{cart.length}</span>
       </label>
-      <span className="cart-count">{cart.length}</span>
       <input id={cartCheckboxId} type="checkbox" hidden />
       <aside className="cart">
         <ul>

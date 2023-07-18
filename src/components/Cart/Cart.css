@@ -1,11 +1,12 @@
 .cart {
   background: #000;
   display: none;
-  padding: 32px;
+  padding: 50px 32px 0px;
   position: fixed;
   right: 0px;
   top: 0px;
   width: 200px;
+  overflow: auto;
 }
 
 .cart img {
@@ -14,8 +15,23 @@
 }
 
 .cart li {
+  position: relative;
   border-bottom: 1px solid #444;
   padding-bottom: 16px;
+}
+
+.cart li > button {
+  position: absolute;
+  padding: 3px;
+  font-size: 12px;
+  border-radius: 50px;
+  background-color: rgb(73, 43, 43);
+  top: -10px;
+  right: -10px;
+}
+
+.cart > button {
+  margin-bottom: 100px;
 }
 
 .cart footer {
@@ -29,6 +45,22 @@
   padding: 8px;
 }
 
+.cart-count {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 10px;
+  height: 10px;
+  padding: 8px;
+  border-radius: 50%;
+  font-size: 14px;
+  top: 5px;
+  right: 40px;
+  z-index: 99999;
+  background-color: green;
+}
+
 .cart-button {
   align-items: center;
   background: #09f;
@@ -38,7 +70,7 @@
   height: 32px;
   justify-content: center;
   padding: 4px;
-  position: absolute;
+  position: fixed;
   right: 8px;
   top: 8px;
   transition: all 0.3s ease;
@@ -53,4 +85,20 @@
 .cart-button ~ input:checked ~ .cart {
   height: 100%;
   display: block;
+}
+
+::-webkit-scrollbar {
+  width: 5px; /* Ancho de la barra de desplazamiento vertical */
+}
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1; /* Color de fondo de la barra de desplazamiento */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888; /* Color del "pulgar" de la barra de desplazamiento */
+  border-radius: 5px; /* Radio de borde del "pulgar" */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Color del "pulgar" al pasar el cursor sobre él */
 }

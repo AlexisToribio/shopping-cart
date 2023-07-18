@@ -4,9 +4,11 @@ export default function CartItem({
   title,
   quantity,
   addToCart,
+  removeFromCart,
 }) {
   return (
     <li>
+      <button onClick={removeFromCart}>❌</button>
       <img src={thumbnail} alt={title} />
       <div>
         <strong>{title}</strong> - ${price}
